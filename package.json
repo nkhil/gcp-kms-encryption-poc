@@ -1,0 +1,33 @@
+{
+  "name": "journal-draft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "> 16.0.0",
+    "npm": "8.6.0"
+  },
+  "scripts": {
+    "test": "npm run copy-test-files && npm run copy-env-file && ava",
+    "copy-env-file": "cp .env ./dist/",
+    "build": "tsc --watch",
+    "clean": "rm -r dist",
+    "copy-test-files": "mkdir -p dist/test/test-files && cp -a ./test/test-files/. ./dist/test/test-files/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ava/typescript": "^3.0.1",
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/node": "^16.0.0",
+    "ava": "^4.3.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@google-cloud/kms": "^2.11.1",
+    "dotenv": "^16.0.1",
+    "envalid": "^7.3.1",
+    "never": "^1.1.0"
+  }
+}

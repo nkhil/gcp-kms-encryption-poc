@@ -1,0 +1,8 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "ES2021",
+    "module": "commonjs"
+	}
+}
