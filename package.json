@@ -10,7 +10,7 @@
   "scripts": {
     "test": "npm run copy-test-files && npm run copy-env-file && ava",
     "copy-env-file": "cp .env ./dist/",
-    "build": "tsc --watch",
+    "build:typescript": "tsc --watch",
     "clean": "rm -r dist",
     "copy-test-files": "mkdir -p dist/test/test-files && cp -a ./test/test-files/. ./dist/test/test-files/"
   },
